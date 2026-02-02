@@ -3,7 +3,8 @@ from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import JSONResponse
-from chatbot import get_response, text_to_speech
+from chatbot import text_to_speech
+from responses import get_response, reset_conversation
 import uuid
 import os
 
@@ -27,11 +28,19 @@ app.mount("/audio", StaticFiles(directory="audio"), name="audio")
 class ChatRequest(BaseModel):
     question: str
     language: str = "en"
+    session_id: str = "default"
+
+class ResetRequest(BaseModel):
+    session_id: str = "default"
 
 @app.post("/chat")
 async def chat_endpoint(req: ChatRequest):
-    # Get chatbot response text
-    response_text = get_response(req.question, req.language)
+    # Get chatbot response text with conversation context
+    response_text = get_response(
+        req.question, 
+        lang_code=req.language,
+        session_id=req.session_id
+    )
     
     # Generate a unique audio filename for each request
     audio_filename = f"response_{uuid.uuid4().hex}_{req.language}.mp3"
@@ -46,11 +55,23 @@ async def chat_endpoint(req: ChatRequest):
     return JSONResponse(
         content={
             "response_text": response_text,
-            "audio_url": audio_url
+            "audio_url": audio_url,
+            "session_id": req.session_id
         },
         media_type="application/json; charset=utf-8"
     )
 
+@app.post("/reset")
+async def reset_endpoint(req: ResetRequest):
+    """Reset conversation for a given session."""
+    message = reset_conversation(req.session_id)
+    return JSONResponse(
+        content={
+            "message": message,
+            "session_id": req.session_id
+        },
+        media_type="application/json; charset=utf-8"
+    )
 
 @app.get("/health")
 def health_check():

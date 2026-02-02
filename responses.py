@@ -77,87 +77,6 @@ INPUT_KEYWORDS = {
         "अवसाद": "depression",
         "चिंता": "anxiety",
         "गठिया": "arthritis",
-        "सलसिल": "bronchitis",
-        "एनीमिया": "anemia",
-        "मूत्र मार्ग संक्रमण": "urinary tract infection",
-        "कान का संक्रमण": "ear infection",
-        "साइनस": "sinusitis",
-        "खुजली": "skin rash",
-        "एक्जिमा": "eczema",
-        "सोरायसिस": "psoriasis",
-        "गैस्ट्रोएंटेराइटिस": "gastroenteritis",
-        "कब्ज़": "constipation",
-        "अनिद्रा": "insomnia",
-        "माइग्रेन": "migraine",
-        "मोटापा": "obesity",
-        "थायरॉयड": "thyroid disorder",
-        "कोलेस्ट्रॉल": "cholesterol",
-        "ऑस्टियोपोरोसिस": "osteoporosis",
-        "स्ट्रोक": "stroke",
-        "कैंसर": "cancer",
-        "टीबी": "tuberculosis",
-        "हेपेटाइटिस": "hepatitis",
-        "एड्स": "HIV/AIDS",
-        "मलेरिया": "malaria",
-        "चिकनगुनिया": "chickenpox",
-        "खसरा": "measles",
-        "डेंगू": "dengue",
-        "ज़िका वायरस": "zika virus",
-        "पोलियो": "polio",
-        "कुत्ते का काटना": "rabies",
-        "टाइफाइड": "typhoid",
-        "हैजिया": "cholera",
-        "अस्पताल": "hospital",
-        "डॉक्टर": "doctor",
-    },
-    'mr': {
-        "ताप": "fever",
-        "खोकला": "cough",
-        "सर्दी": "cold",
-        "मायग्रेन": "headache",
-        "मधुमेह": "diabetes",
-        "उच्च रक्तदाब": "hypertension",
-        "दमा": "asthma",
-        "अॅलर्जी": "allergy",
-        "फ्लू": "flu",
-        "पोटदुखी": "stomach ache",
-        "जुलाब": "diarrhea",
-        "मागदुखी": "back pain",
-        "निराशा": "depression",
-        "तणाव": "anxiety",
-        "आपटी": "arthritis",
-        "ब्रॉन्कायटीस": "bronchitis",
-        "अॅनीमिया": "anemia",
-        "मूत्रमार्गाचा संसर्ग": "urinary tract infection",
-        "कर्णदाह": "ear infection",
-        "साइनसिटिस": "sinusitis",
-        "त्वचेवरचा डाग": "skin rash",
-        "एक्झिमा": "eczema",
-        "सोरायसिस": "psoriasis",
-        "गॅस्ट्रोएंटराइटिस": "gastroenteritis",
-        "कब्ज": "constipation",
-        "निद्रा नाही": "insomnia",
-        "मायग्रेन": "migraine",
-        "लठ्ठपणा": "obesity",
-        "थायरॉईड": "thyroid disorder",
-        "कोलेस्ट्रॉल": "cholesterol",
-        "ऑस्टिओपोरोसिस": "osteoporosis",
-        "स्ट्रोक": "stroke",
-        "कॅन्सर": "cancer",
-        "क्षयरोग": "tuberculosis",
-        "हेपाटायटिस": "hepatitis",
-        "एचआयव्ही/एड्स": "HIV/AIDS",
-        "मलेरिया": "malaria",
-        "चिकनपॉक्स": "chickenpox",
-        "खसरा": "measles",
-        "डेंग्यू": "dengue",
-        "झिका व्हायरस": "zika virus",
-        "पोलिओ": "polio",
-        "रॅबीज": "rabies",
-        "टायफॉईड": "typhoid",
-        "कोलेरा": "cholera",
-        "रुग्णालय": "hospital",
-        "डॉक्टर": "doctor",
     },
     'ta': {
         "காய்ச்சல்": "fever",
@@ -168,143 +87,16 @@ INPUT_KEYWORDS = {
         "உயர் இரத்த அழுத்தம்": "hypertension",
         "அஸ்துமா": "asthma",
         "அலெர்ஜி": "allergy",
-        "பொதி": "flu",
-        "குடல் வலி": "stomach ache",
-        "திண்டாட்டம்": "diarrhea",
-        "பின்புற வலி": "back pain",
-        "உதடுபாதம்": "depression",
-        "கவலை": "anxiety",
-        "உடலிழப்பு": "arthritis",
-        "நுரையீரல் வியாதி": "bronchitis",
-        "இரத்த சிவப்பு குறைவு": "anemia",
-        "மூத்திர பாதை தொற்று": "urinary tract infection",
-        "காது தொற்று": "ear infection",
-        "சைனஸ்": "sinusitis",
-        "தோல் உதிர்வு": "skin rash",
-        "எக்ஸிமா": "eczema",
-        "பசுமை ஓராட்டிகள்": "psoriasis",
-        "குடல் அழற்சித்தன்மை": "gastroenteritis",
-        "கட்டித்தல்": "constipation",
-        "உறக்கம் குறைவு": "insomnia",
-        "மயக்கக்கோளாறு": "migraine",
-        "ஊட்டச்சத்து குறைவு": "obesity",
-        "தையிராய்டு நோய்": "thyroid disorder",
-        "கொலஸ்டெரால்": "cholesterol",
-        "எலும்பு சிதைவு": "osteoporosis",
-        "மூளைப்பிடிப்பு": "stroke",
-        "புற்றுநோய்": "cancer",
-        "நோய் காசநோய்": "tuberculosis",
-        "கடும் கல்லீரல் அழற்சி": "hepatitis",
-        "எச்சரிக்கை": "HIV/AIDS",
-        "கண்டிப்பான கிருமிநாசினி": "malaria",
-        "கிளிக்கன் பாக்ஸ்": "chickenpox",
-        "காசநோய்": "measles",
-        "டெங்கு": "dengue",
-        "ஜிகா வைரஸ்": "zika virus",
-        "பாலியோ": "polio",
-        "குப்பை நோய்": "rabies",
-        "டைபாய்டு": "typhoid",
-        "காலரா": "cholera",
-        "மருத்துவமனை": "hospital",
-        "ஆறுமுறை நிபுணர்": "doctor",
-    },
-    'bn': {
-        "জ্বর": "fever",
-        "কাশি": "cough",
-        "ঠান্ডা": "cold",
-        "মাথাব্যাথা": "headache",
-        "ডায়াবেটিস": "diabetes",
-        "উচ্চ রক্তচাপ": "hypertension",
-        "অ্যাজমা": "asthma",
-        "অ্যালার্জি": "allergy",
-        "ফ্লু": "flu",
-        "পেট ব্যথা": "stomach ache",
-        "হাঁপানি": "diarrhea",
-        "পিঠের ব্যথা": "back pain",
-        "মনোসংকট": "depression",
-        "উদ্বেগ": "anxiety",
-        "অর্থ্রাইটিস": "arthritis",
-        "ব্রঙ্কাইটিস": "bronchitis",
-        "রক্তস্বল্পতা": "anemia",
-        "মূত্রনালী সংক্রমণ": "urinary tract infection",
-        "কানের ইনফেকশন": "ear infection",
-        "সাইনুসাইটিস": "sinusitis",
-        "চামড়ার র‍্যাশ": "skin rash",
-        "এক্সিমা": "eczema",
-        "সোরায়াসিস": "psoriasis",
-        "গ্যাস্ট্রোএনটেরাইটিস": "gastroenteritis",
-        "কব্জ": "constipation",
-        "অনিদ্রা": "insomnia",
-        "মাইগ্রেন": "migraine",
-        "স্থূলতা": "obesity",
-        "থাইরয়েড ডিজিজ": "thyroid disorder",
-        "কোলেস্টেরল": "cholesterol",
-        "অস্টিওপরোসিস": "osteoporosis",
-        "স্ট্রোক": "stroke",
-        "ক্যান্সার": "cancer",
-        "ক্ষয়রোগ": "tuberculosis",
-        "হেপাটাইটিস": "hepatitis",
-        "এইচআইভি/এইডস": "HIV/AIDS",
-        "ম্যালেরিয়া": "malaria",
-        "চিকেনপক্স": "chickenpox",
-        "হামসা": "measles",
-        "ডেঙ্গু": "dengue",
-        "জিকা ভাইরাস": "zika virus",
-        "পোলিও": "polio",
-        "কুকুর কামড়": "rabies",
-        "টাইফয়েড": "typhoid",
-        "কলেরা": "cholera",
-        "হাসপাতাল": "hospital",
-        "ডাক্তার": "doctor",
     },
     'te': {
         "జ్వరం": "fever",
         "చప్పుడు": "cough",
         "జలుబు": "cold",
-        " తలనొప్పి": "headache",
+        "తలనొప్పి": "headache",
         "మధుమేహం": "diabetes",
         "ఉన్నత రక్తపోటు": "hypertension",
         "దమ": "asthma",
         "అలర్జీ": "allergy",
-        "ఫ్లూ": "flu",
-        "వాంతులు": "stomach ache",
-        "డయరియా": "diarrhea",
-        "పైను నొప్పి": "back pain",
-        "మనస్తాపం": "depression",
-        "ఆందోళన": "anxiety",
-        "ఆర్థరైటిస్": "arthritis",
-        "బ్రాంకటైటిస్": "bronchitis",
-        "అనిమియా": "anemia",
-        "మూత్రాశయ ఇన్ఫెక్షన్": "urinary tract infection",
-        "చెవి ఇన్ఫెక్షన్": "ear infection",
-        "సైనసైటిస్": "sinusitis",
-        "చర్మ ర్యాష్": "skin rash",
-        "ఎగ్జిమా": "eczema",
-        "సోరాయసిస్": "psoriasis",
-        "గ్యాస్ట్రోఎంటరైటిస్": "gastroenteritis",
-        "కబ్జితనం": "constipation",
-        "నిద్రలేమి": "insomnia",
-        "మైగ్రైన్": "migraine",
-        "స్థూలత్వం": "obesity",
-        "తోయిరాయిడ్": "thyroid disorder",
-        "కోలెస్ట్రాల్": "cholesterol",
-        "అస్థిముల్నశం": "osteoporosis",
-        "స్ట్రోక్": "stroke",
-        "కేన్సర్": "cancer",
-        "క్షయ రోగం": "tuberculosis",
-        "హెపటైటిస్": "hepatitis",
-        "హెచ్ ఐ వి/ఏ ఆ ద్స్": "HIV/AIDS",
-        "మలేరియా": "malaria",
-        "చికెన్ పాక్స్": "chickenpox",
-        "మీసల్స్": "measles",
-        "డెన్గ్యూ": "dengue",
-        "జికా వైరస్": "zika virus",
-        "పోలియో": "polio",
-        "ఖాళీ కుక్క గొసుక": "rabies",
-        "టైఫాయిడ్": "typhoid",
-        "కాలరా": "cholera",
-        "హాస్పిటల్": "hospital",
-        "డాక్టర్": "doctor",
     },
     'kn': {
         "ಜ್ವರ": "fever",
@@ -315,313 +107,182 @@ INPUT_KEYWORDS = {
         "ಹೈಪರ್ಟೆನ್ಷನ್": "hypertension",
         "ಅಸ್ಥಮಾ": "asthma",
         "ಅಲರ್ಜಿ": "allergy",
-        "ಕೀಲು": "flu",
-        "ಒಳು": "stomach ache",
-        "ಅರೆ": "diarrhea",
-        "ಕೋಪನೆಯ ನೋವು": "back pain",
-        "ಅವಸಾದ": "depression",
-        "ಉದ್ವೇಗ": "anxiety",
-        "ಸಂಧಿ ನೋವು": "arthritis",
-        "ಬ್ರಾಂಕೈಟಿಸ್": "bronchitis",
-        "ಅನಿಮಿಯಾ": "anemia",
-        "ಮೂತ್ರದ ಮಾರ್ಗದ ಸೋಂಕು": "urinary tract infection",
-        "ಕಿವಿ ಸೋಂಕು": "ear infection",
-        "ಸೈನಸೈಟಿಸ್": "sinusitis",
-        "ತಳೆಯ ಮೇಲಿನ ಚರ್ಮ": "skin rash",
-        "ಎಕ್ಜೀಮಾ": "eczema",
-        "ಸೋರಾಯಾಸಿಸ್": "psoriasis",
-        "ಗ್ಯಾಸ್ಟ್ರೋಎಂಟರೈಟಿಸ್": "gastroenteritis",
-        "ಕೊಬ್ಬು": "constipation",
-        "ನಿದ್ರೆ ವ್ಯತ್ಯಯ": "insomnia",
-        "ಮೈಗ್ರೇನ್": "migraine",
-        "ಸ್ಥೂಲತೆ": "obesity",
-        "ಥೈರಾಯ್ಡ್": "thyroid disorder",
-        "ಕೊಲೆಸ್ಟೆರಾಲ್": "cholesterol",
-        "ಅಸ್ಥಿಮೊರೋಸಿಸ್": "osteoporosis",
-        "ಸ್ಟ್ರೋಕ್": "stroke",
-        "ಕ್ಯಾನ್ಸರ್": "cancer",
-        "ಕ್ಷಯ": "tuberculosis",
-        "ಹೆಪಟೈಟಿಸ್": "hepatitis",
-        "ಎಚ್. ಐ. ವಿ/ಎಡ್ಸ್": "HIV/AIDS",
-        "ಮಲೇರಿಯಾ": "malaria",
-        "ಚಿಕನ್ ಪಾಕ್ಸ್": "chickenpox",
-        "ಮೀಸಲ್ಸ್": "measles",
-        "ಡೆಂಗ್ಯೂ": "dengue",
-        "ಜಿಕಾ ವೈರಸ್": "zika virus",
-        "ಪೋಲಿಯೋ": "polio",
-        "ರೇಬೀಸ್": "rabies",
-        "ಟೈಫಾಯ್ಡ್": "typhoid",
-        "ಕೊಲೆರಾ": "cholera",
-        "ಆಸ್ಪತ್ರೆ": "hospital",
-        "ಡಾಕ್ಟರ್": "doctor",
     },
-    'gu': {
-        "બુખાર": "fever",
-        "ખાંસી": "cough",
-        "ઠંડી": "cold",
-        "શેરીમાં દુખાવો": "headache",
-        "ડાયાબિટીસ": "diabetes",
-        "ઉચ્ચ રક્તચાપ": "hypertension",
-        "અસ્થમા": "asthma",
-        "એલર્જી": "allergy",
-        "ફ્લુ": "flu",
-        "પેટ દુખાવો": "stomach ache",
-        "ડાયરિયા": "diarrhea",
-        "પીઠ દુખાવો": "back pain",
-        "આત્મઘાત": "depression",
-        "ઉદાસી": "anxiety",
-        "જોયન્ટમાં દુખાવો": "arthritis",
-        "બ્રોંકાઈટીસ": "bronchitis",
-        "અનિમિયા": "anemia",
-        "મૂત્ર માર્ગ સંક્રમણ": "urinary tract infection",
-        "કાનનો ઈન્ફેક્શન": "ear infection",
-        "સાઇનસાઇટિસ": "sinusitis",
-        "ચામડીની ઉમેરી": "skin rash",
-        "એક્સીમા": "eczema",
-        "સોરાયસિસ": "psoriasis",
-        "ગૅસ્ટ્રોએન્ટરાઇટિસ": "gastroenteritis",
-        "કબજ": "constipation",
-        "નિદાન": "insomnia",
-        "માઈગ્રેન": "migraine",
-        "મોટાપો": "obesity",
-        "થાઇરોઇડ બિમારી": "thyroid disorder",
-        "કોલેસ્ટ્રોલ": "cholesterol",
-        "ઓસ્ટિઓપોરોસિસ": "osteoporosis",
-        "સ્ટ્રોક": "stroke",
-        "કૅન્સર": "cancer",
-        "ટ્યુબરક્યુલોસિસ": "tuberculosis",
-        "હેપેટાઈટિસ": "hepatitis",
-        "એચઆઈવી/એડ્સ": "HIV/AIDS",
-        "મેલેરિયા": "malaria",
-        "ચિકનપોક્સ": "chickenpox",
-        "ખસરો": "measles",
-        "ડેન્ગ્યુ": "dengue",
-        "ઝિકા વાયરસ": "zika virus",
-        "પોલિયો": "polio",
-        "રેવિઝ": "rabies",
-        "ટાઇફોયડ": "typhoid",
-        "કોલેરા": "cholera",
-        "હૉસ્પિટલ": "hospital",
-        "ડૉક્ટર": "doctor",
-    },
-    'pa': {
-        "ਬੁਖਾਰ": "fever",
-        "ਖਾਂਸੀ": "cough",
-        "ਸਰਦੀ": "cold",
-        "ਸਿਰਦਰਦ": "headache",
-        "ਮਧੁਮੇਹ": "diabetes",
-        "ਉੱਚ ਰਕਤਚਾਪ": "hypertension",
-        "ਦਮਾ": "asthma",
-        "ਅਲਰਜੀ": "allergy",
-        "ਫਲੂ": "flu",
-        "ਪੀਟ ਦਰਦ": "stomach ache",
-        "ਦਸਤ": "diarrhea",
-        "ਪੀਠ ਦਰਦ": "back pain",
-        "ਡਿਪ੍ਰੈਸ਼ਨ": "depression",
-        "ਚਿੰਤਾ": "anxiety",
-        "ਗਠਿਆ": "arthritis",
-        "ਬ੍ਰੋਂਕਾਈਟਿਸ": "bronchitis",
-        "ਐਨੀਮੀਆ": "anemia",
-        "ਮੂਤਰ ਰਾਹ ਇੰਫੈਕਸ਼ਨ": "urinary tract infection",
-        "ਕਾਨ ਦਾ ਇੰਫੈਕਸ਼ਨ": "ear infection",
-        "ਸਾਈਨਸਾਈਟਿਸ": "sinusitis",
-        "ਚਮੜੀ ਰੈਸ਼": "skin rash",
-        "ਐਕਜ਼ੀਮਾ": "eczema",
-        "ਸੋਰੇਆਸਿਸ": "psoriasis",
-        "ਗੈਸਟ੍ਰੋਐਂਟਰਾਈਟਿਸ": "gastroenteritis",
-        "ਬਦਹਜ਼ਮੀ": "constipation",
-        "ਨੀਂਦ ਨਾ ਆਉਣਾ": "insomnia",
-        "ਮਾਈਗਰੇਨ": "migraine",
-        "ਮੋਟਾਪਾ": "obesity",
-        "ਥਾਇਰਾਇਡ": "thyroid disorder",
-        "ਕੋਲੈਸਟ੍ਰੋਲ": "cholesterol",
-        "ਹੱਡੀ ਕਮਜ਼ੋਰੀ": "osteoporosis",
-        "ਦਿਮਾਗੀ ਦੌਰਾ": "stroke",
-        "ਕੈਂਸਰ": "cancer",
-        "ਟਿਊਬਰਕੁਲੋਸਿਸ": "tuberculosis",
-        "ਹੈਪਾਟਾਈਟਿਸ": "hepatitis",
-        "ਐਚਆਈਵੀ/ਏਡਸ": "HIV/AIDS",
-        "ਮਲੇਰੀਆ": "malaria",
-        "ਚਿਕਨ ਪੌਕਸ": "chickenpox",
-        "ਖਸਰਾ": "measles",
-        "ਡੈਂਗੂ": "dengue",
-        "ਜ਼ੀਕਾ ਵਾਇਰਸ": "zika virus",
-        "ਪੋਲਿਓ": "polio",
-        "ਰੇਬੀਜ਼": "rabies",
-        "ਟਾਇਫ਼ਾਇਡ": "typhoid",
-        "ਕੋਲੇਰਾ": "cholera",
-        "ਹਸਪਤਾਲ": "hospital",
-        "ਡਾਕਟਰ": "doctor",
-    },
-    'ml': {
-        "ജ്വരം": "fever",
-        "തുമ്മല്‍": "cough",
-        "തണുപ്പ്": "cold",
-        "വൈശാഖം": "headache",
-        "ശരീരത്തിലെ മധുമേഹം": "diabetes",
-        "ഉയർന്ന രക്തച്ചാപ്പ്": "hypertension",
-        "അസ്ത്മ": "asthma",
-        "അലർജി": "allergy",
-        "ഫ്ലു": "flu",
-        "വയറുവേദന": "stomach ache",
-        "വയറിളക്കം": "diarrhea",
-        "ശരീരവേദനകൾ": "back pain",
-        "ദുഖിത മനസ്സ്": "depression",
-        "മനോബാധ": "anxiety",
-        "സന്ധിവേദന": "arthritis",
-        "ബ്രോങ്കൈറ്റിസ്": "bronchitis",
-        "അനീമിയ": "anemia",
-        "മൂത്ര മാർഗം പ്രതിരോധം": "urinary tract infection",
-        "കാത് വൈറസ്": "ear infection",
-        "സൈനുസൈറ്റിസ്": "sinusitis",
-        "ത്വക്ക് കൊഴുപ്പ്": "skin rash",
-        "എക്സിമ": "eczema",
-        "സോരായാസിസ്": "psoriasis",
-        "ഗെസ്ട്രോഎൻററൈറ്റിസ്": "gastroenteritis",
-        "കബ്ജ്": "constipation",
-        "അനിദ്ര": "insomnia",
-        "മൈഗ്രെയ്ൻ": "migraine",
-        "കഴുത്തല": "obesity",
-        "തൈറോയിഡ്": "thyroid disorder",
-        "കൊളസ്ട്രോള്": "cholesterol",
-        " അസ്ഥിമാസിസ്": "osteoporosis",
-        "സ്റ്റ്രോക്ക്": "stroke",
-        "കാൻസർ": "cancer",
-        "ക്ഷയം": "tuberculosis",
-        "ഹെപ്പറ്റൈറ്റിസ്": "hepatitis",
-        "എച്ച്.ഐ.വി/എഡ്സ്": "HIV/AIDS",
-        "മലേറിയ": "malaria",
-        "ചിക്കൻപോക്സ്": "chickenpox",
-        "മീസൽസ്": "measles",
-        "ഡെങ്ക്യു": "dengue",
-        "ജീക്ക വൈറസ്": "zika virus",
-        "പോളിയോ": "polio",
-        "രേബീസ്": "rabies",
-        "ടൈഫോയ്‌ഡ്": "typhoid",
-        "കൊളറ": "cholera",
-        "ആശ eli pital": "hospital",
-        "ഡോക്ടര്": "doctor",
-    },
-    'ur': {
-        "بخار": "fever",
-        "ککھ": "cough",
-        "نزلہ": "cold",
-        "سر درد": "headache",
-        "ذیابیطس": "diabetes",
-        "بلڈ پریشر": "hypertension",
-        "دمہ": "asthma",
-        "الرژی": "allergy",
-        "انفلوئنزا": "flu",
-        "پیٹ درد": "stomach ache",
-        "اسہال": "diarrhea",
-        "پیٹھ درد": "back pain",
-        "ڈپریشن": "depression",
-        "انگزائٹی": "anxiety",
-        "گٹھیا": "arthritis",
-        "برونکائٹس": "bronchitis",
-        "خون کی کمی": "anemia",
-        "پیشاب کی نالی کا انفیکشن": "urinary tract infection",
-        "کان کا انفیکشن": "ear infection",
-        "سائنسائٹس": "sinusitis",
-        "جلد کا خارش": "skin rash",
-        "ایكزیما": "eczema",
-        "سورایسِس": "psoriasis",
-        "گیسٹروانٹرائٹس": "gastroenteritis",
-        "قبض": "constipation",
-        "نیند نہ آنا": "insomnia",
-        "مایگرین": "migraine",
-        "موٹاپا": "obesity",
-        "تھائیرائیڈ کی خرابی": "thyroid disorder",
-        "کولیسٹرول": "cholesterol",
-        "ہڈیوں کی کمزوری": "osteoporosis",
-        "فالج": "stroke",
-        "کینسر": "cancer",
-        "ٹی بی": "tuberculosis",
-        "ہیپاٹائٹس": "hepatitis",
-        "ایچ آئی وی/ایڈز": "HIV/AIDS",
-        "ملیریا": "malaria",
-        "چکن پاکس": "chickenpox",
-        "خسرہ": "measles",
-        "ڈینگی": "dengue",
-        "زیكا وائرس": "zika virus",
-        "پولیو": "polio",
-        "ربیز": "rabies",
-        "ٹائفائڈ": "typhoid",
-        "کولیرہ": "cholera",
-        "ہسپتال": "hospital",
-        "ڈاکٹر": "doctor",
-    },
-    
 }
-
-
-
 
 translator = Translator()
 
+# Conversation state management
+class ConversationState:
+    def __init__(self):
+        self.sessions = {}
+    
+    def get_session(self, session_id):
+        if session_id not in self.sessions:
+            self.sessions[session_id] = {
+                'stage': 'initial',
+                'symptom': None,
+                'duration': None,
+                'severity': None,
+                'additional_symptoms': None,
+                'language': 'en'
+            }
+        return self.sessions[session_id]
+    
+    def update_session(self, session_id, **kwargs):
+        session = self.get_session(session_id)
+        session.update(kwargs)
+        return session
+    
+    def reset_session(self, session_id):
+        if session_id in self.sessions:
+            del self.sessions[session_id]
 
-def get_response(user_input, lang_code='en'):
-    """Return a short medical response for the given input.
+# Global conversation state
+conversation_state = ConversationState()
 
-    Behavior:
-    - Normalize input.
-    - If `lang_code` is `'auto'` or None, attempt to detect input language.
-    - If we have a keyword map for the detected language, match local keywords.
-    - Otherwise translate the input to English and match English keys.
-    - Translate the English reply back to the requested language (if not English).
+
+def translate_text(text, target_lang='en'):
+    """Translate text to target language."""
+    if not text or target_lang == 'en':
+        return text
+    try:
+        translated = translator.translate(text, dest=target_lang)
+        return translated.text
+    except Exception as e:
+        print(f"Translation error: {e}")
+        return text
+
+
+def detect_symptom(user_input, lang_code='en'):
+    """Detect symptom from user input."""
+    normalized = unicodedata.normalize('NFC', user_input).lower()
+    
+    # Try language-specific keywords first
+    if lang_code in INPUT_KEYWORDS:
+        keywords_map = INPUT_KEYWORDS[lang_code]
+        for local_word, eng_key in keywords_map.items():
+            if local_word in normalized:
+                return eng_key
+    
+    # Try translating to English and matching
+    try:
+        translated = translator.translate(normalized, dest='en')
+        translated_text = (translated.text or normalized).lower()
+        
+        for key in RESPONSES_EN.keys():
+            if key in translated_text:
+                return key
+    except Exception:
+        pass
+    
+    return None
+
+
+def get_conversational_response(user_input, session_id, lang_code='en'):
+    """
+    Generate conversational response based on conversation state.
+    Asks follow-up questions before providing final advice.
+    """
+    session = conversation_state.get_session(session_id)
+    session['language'] = lang_code
+    
+    normalized_input = user_input.lower().strip()
+    
+    # Stage 1: Initial symptom detection
+    if session['stage'] == 'initial':
+        symptom = detect_symptom(user_input, lang_code)
+        
+        if symptom and symptom != 'default':
+            conversation_state.update_session(
+                session_id,
+                symptom=symptom,
+                stage='ask_duration'
+            )
+            response = f"I understand you're experiencing {symptom}. How long have you been experiencing this symptom? (e.g., a few hours, 2 days, a week)"
+            return translate_text(response, lang_code)
+        else:
+            response = "I'm here to help with your health concerns. Could you please describe your main symptom? (e.g., fever, cough, headache)"
+            return translate_text(response, lang_code)
+    
+    # Stage 2: Ask about duration
+    elif session['stage'] == 'ask_duration':
+        conversation_state.update_session(
+            session_id,
+            duration=user_input,
+            stage='ask_severity'
+        )
+        response = "Thank you. On a scale of 1-10, how severe is your symptom? (1 = mild, 10 = very severe)"
+        return translate_text(response, lang_code)
+    
+    # Stage 3: Ask about severity
+    elif session['stage'] == 'ask_severity':
+        conversation_state.update_session(
+            session_id,
+            severity=user_input,
+            stage='ask_additional'
+        )
+        response = "Are you experiencing any additional symptoms? (e.g., nausea, fatigue, body aches) Or say 'none' if you don't have any."
+        return translate_text(response, lang_code)
+    
+    # Stage 4: Ask about additional symptoms and provide final advice
+    elif session['stage'] == 'ask_additional':
+        conversation_state.update_session(
+            session_id,
+            additional_symptoms=user_input,
+            stage='complete'
+        )
+        
+        # Generate personalized response
+        symptom = session['symptom']
+        duration = session['duration']
+        severity = session['severity']
+        additional = user_input
+        
+        base_advice = RESPONSES_EN.get(symptom, RESPONSES_EN['default'])
+        
+        # Create personalized response
+        personalized_response = f"Based on your {symptom} for {duration} with severity {severity}"
+        
+        if additional.lower() not in ['none', 'no', 'नहीं', 'இல்லை', 'లేదు', 'ಇಲ್ಲ']:
+            personalized_response += f" and additional symptoms ({additional})"
+        
+        personalized_response += f", here's my advice:\n\n{base_advice}"
+        
+        # Add urgency note based on severity
+        try:
+            severity_num = int(''.join(filter(str.isdigit, severity)) or '5')
+            if severity_num >= 8:
+                personalized_response += "\n\n⚠️ Given the high severity, I strongly recommend seeking immediate medical attention."
+            elif severity_num >= 6:
+                personalized_response += "\n\n⚠️ Please consider consulting a doctor soon."
+        except:
+            pass
+        
+        personalized_response += "\n\nWould you like to ask about another symptom? (Type 'yes' to start over or describe a new symptom)"
+        
+        # Reset for next conversation
+        conversation_state.update_session(session_id, stage='initial')
+        
+        return translate_text(personalized_response, lang_code)
+    
+    # Fallback
+    response = "I'm here to help. Please describe your symptom."
+    return translate_text(response, lang_code)
+
+
+def get_response(user_input, lang_code='en', session_id='default'):
+    """
+    Main entry point for getting chatbot response.
+    Now supports conversational flow with session management.
     """
     if not user_input:
         return RESPONSES_EN.get("default")
+    
+    return get_conversational_response(user_input, session_id, lang_code)
 
-    normalized = unicodedata.normalize('NFC', user_input).lower()
 
-    detected_lang = lang_code or 'en'
-    # If user requested auto-detection
-    if detected_lang in (None, 'auto'):
-        try:
-            detected = translator.detect(normalized)
-            detected_lang = getattr(detected, 'lang', 'en') or 'en'
-        except Exception:
-            detected_lang = 'en'
-
-    response_key = "default"
-
-    # 1) If we have local keywords for this language, try to match them first
-    try:
-        if detected_lang in INPUT_KEYWORDS:
-            keywords_map = INPUT_KEYWORDS[detected_lang]
-            for local_word, eng_key in keywords_map.items():
-                if local_word in normalized:
-                    response_key = eng_key
-                    break
-    except Exception:
-        response_key = "default"
-
-    # 2) If no local match, try translating the input to English and match English keys
-    if response_key == "default":
-        translated_text = normalized
-        try:
-            translated = translator.translate(normalized, dest='en')
-            translated_text = (translated.text or normalized).lower()
-        except Exception:
-            translated_text = normalized
-
-        for key in RESPONSES_EN.keys():
-            if key in translated_text:
-                response_key = key
-                break
-
-    # Get English reply safely
-    reply_en = RESPONSES_EN.get(response_key, RESPONSES_EN.get("default", "Sorry, I didn't understand."))
-
-    # If requested language isn't English, try translating the reply
-    if (lang_code or detected_lang) != 'en':
-        target = lang_code if lang_code and lang_code != 'auto' else detected_lang
-        try:
-            translated_reply = translator.translate(reply_en, dest=target)
-            return translated_reply.text
-        except Exception:
-            # If translation fails, return English reply as fallback
-            return reply_en
-
-    return reply_en
+def reset_conversation(session_id):
+    """Reset conversation for a given session."""
+    conversation_state.reset_session(session_id)
+    return "Conversation reset. How can I help you today?"
