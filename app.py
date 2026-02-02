@@ -73,6 +73,29 @@ async def reset_endpoint(req: ResetRequest):
         media_type="application/json; charset=utf-8"
     )
 
+@app.get("/")
+def root():
+    """Root endpoint with API information"""
+    return JSONResponse(content={
+        "name": "AROGYA VANI Health Chatbot API",
+        "version": "2.0",
+        "status": "running",
+        "endpoints": {
+            "POST /chat": "Send a message and get conversational response",
+            "POST /reset": "Reset conversation session",
+            "GET /health": "Health check endpoint",
+            "GET /docs": "Interactive API documentation"
+        },
+        "features": [
+            "Conversational AI with follow-up questions",
+            "Multilingual support (8+ languages)",
+            "Text-to-Speech responses",
+            "Session management",
+            "Polite closing responses",
+            "Smart error handling"
+        ]
+    })
+
 @app.get("/health")
 def health_check():
     return JSONResponse(content={"status": "ok"})
