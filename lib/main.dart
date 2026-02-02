@@ -39,7 +39,7 @@ class _ChatbotPageState extends State<ChatbotPage> {
   // IMPORTANT: Update this URL after deploying to Railway/Render
   // For local development: http://127.0.0.1:8000
   // For production: https://your-app-name.railway.app or your deployed URL
-  final String apiBaseUrl = "http://127.0.0.1:8000";
+  final String apiBaseUrl = "https://web-production-c2ec2.up.railway.app";
 
   List<Map<String, dynamic>> messages = [];
   String sessionId = DateTime.now().millisecondsSinceEpoch.toString();
