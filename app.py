@@ -76,3 +76,10 @@ async def reset_endpoint(req: ResetRequest):
 @app.get("/health")
 def health_check():
     return JSONResponse(content={"status": "ok"})
+
+if __name__ == "__main__":
+    import uvicorn
+    print("🚀 Starting AROGYA VANI Health Chatbot Server...")
+    print("📍 Server will be available at: http://localhost:8000")
+    print("📚 API Documentation: http://localhost:8000/docs")
+    uvicorn.run(app, host="0.0.0.0", port=8000)

@@ -5,11 +5,14 @@ A conversational health chatbot that provides personalized medical advice in mul
 ## Features
 
 - 🗣️ **Conversational AI**: Asks follow-up questions for personalized advice
-- 🌍 **Multilingual Support**: English, Hindi, Tamil, Telugu, Kannada
+- 🌍 **Multilingual Support**: English, Hindi, Tamil, Telugu, Kannada, Bengali, Gujarati, Marathi
 - 🔊 **Text-to-Speech**: Audio responses in all supported languages
-- 💬 **Session Management**: Maintains conversation context
-- 🎨 **Modern UI**: Clean, responsive Flutter web interface
+- 💬 **Session Management**: Maintains conversation context across multiple turns
+- 🎨 **Modern UI**: Clean, responsive Flutter web interface with Material 3 design
 - ⚡ **Fast API Backend**: Built with FastAPI for high performance
+- 🤝 **Polite Responses**: Gracefully handles thank you, goodbye, and closing statements
+- ❓ **Smart Error Handling**: Provides helpful messages for unknown symptoms
+- ⚠️ **Urgency Detection**: Warns users when symptoms require immediate medical attention
 
 ## Architecture
 
@@ -150,8 +153,20 @@ Bot: Are you experiencing any additional symptoms?
 
 User: headache and body aches
 Bot: Based on your fever for 2 days with severity 7 and additional symptoms (headache and body aches), here's my advice:
-     Please consult a doctor and stay hydrated.
+     Rest well, drink plenty of water or oral rehydration fluids, and consult a doctor if fever is high or lasts more than a few days.
      ⚠️ Please consider consulting a doctor soon.
+     
+User: Thank you
+Bot: You're welcome! Take care of your health. Feel free to ask if you have any other health concerns.
+```
+
+### Handling Unknown Symptoms
+
+```
+User: I have dragon pox
+Bot: I'm sorry, but information about that specific symptom is currently unavailable in my database. 
+     I'm continuously being updated with more health information. For now, I recommend consulting 
+     a healthcare professional for personalized advice. Is there another symptom I can help you with?
 ```
 
 ## API Endpoints

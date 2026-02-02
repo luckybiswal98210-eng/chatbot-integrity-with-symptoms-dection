@@ -1,92 +1,95 @@
 import unicodedata
 from googletrans import Translator
 
-# English response dictionary
+# English response dictionary - Comprehensive health advice
 RESPONSES_EN = {
-    "fever": "Please consult to doctor and stay hydrated.",
-    "cough": "For cough, try honey and ginger tea. If severe, consult a doctor.",
-    "cold": "Rest well, drink warm fluids, and consider saline nasal spray.",
-    "headache": "Avoid bright lights; take ibuprofen if needed.",
-    "diabetes": "Monitor blood sugar regularly; follow your doctor's instructions.",
-    "hypertension": "Eat low sodium, exercise, and take prescribed meds.",
-    "asthma": "Use inhaler as prescribed; avoid smoke and allergens.",
-    "allergy": "Avoid allergens; take antihistamines prescribed by doctor.",
-    "flu": "Rest, drink fluids, and use fever reducers if needed.",
-    "stomach ache": "Eat light foods and stay hydrated; see doctor if severe.",
-    "diarrhea": "Hydrate with oral rehydration solutions; avoid greasy foods.",
-    "back pain": "Rest, apply heat, and do gentle stretches; consult specialist.",
-    "depression": "Seek mental health support; counseling and medication help.",
-    "anxiety": "Practice relaxation, mindfulness; seek professional help.",
-    "arthritis": "Exercise joints gently; use anti-inflammatories as prescribed.",
-    "bronchitis": "Avoid irritants; use medications as advised by doctor.",
-    "bronchiectasis": "Follow respiratory therapy; take antibiotics as needed.",
-    "anemia": "Eat iron-rich foods and take supplements as prescribed.",
-    "urinary tract infection": "Drink lots of fluids; antibiotics may be needed.",
-    "ear infection": "Use prescribed ear drops; keep ear dry.",
-    "sinusitis": "Use decongestants and nasal sprays; rest well.",
-    "skin rash": "Avoid irritants; use topical creams if advised.",
-    "eczema": "Moisturize regularly; avoid triggers.",
-    "psoriasis": "Use prescribed creams; manage stress.",
-    "gastroenteritis": "Stay hydrated; follow diet; seek help if severe.",
-    "constipation": "Increase fiber intake; drink water.",
-    "insomnia": "Maintain sleep hygiene; consider counseling.",
-    "migraine": "Avoid triggers; use medications prescribed.",
-    "obesity": "Balanced diet and exercise; medical support if needed.",
-    "thyroid disorder": "Take prescribed thyroid medications regularly.",
-    "cholesterol": "Diet control, exercise; take meds if prescribed.",
-    "osteoporosis": "Calcium, vitamin D; weight-bearing exercises.",
-    "stroke": "Emergency care; follow rehab protocols.",
-    "cancer": "Consult oncologist for treatment options.",
-    "tuberculosis": "Complete prescribed antibiotic course.",
-    "hepatitis": "Avoid alcohol; follow medical advice.",
-    "HIV/AIDS": "Antiretroviral therapy and regular monitoring.",
-    "malaria": "Complete antimalarial treatment; prevent mosquito bites.",
-    "chickenpox": "Relieve itch; isolate to prevent spread.",
-    "measles": "Supportive care; isolate to prevent spread.",
-    "dengue": "Hydrate and rest; seek hospital if severe.",
-    "zika virus": "Prevent mosquito bites; symptomatic treatment.",
-    "polio": "Vaccination is preventive; supportive care.",
-    "rabies": "Post-exposure prophylaxis immediately.",
-    "typhoid": "Complete antibiotic course.",
-    "cholera": "Oral rehydration and antibiotics if needed.",
+    "fever": "Rest well, drink plenty of water or oral rehydration fluids, and consult a doctor if fever is high or lasts more than a few days.",
+    "cough": "Try honey with warm water or ginger tea to soothe the throat, and consult a doctor if cough is severe or persistent.",
+    "cold": "Rest properly, drink warm fluids like soup or herbal tea, and consider saline nasal spray for congestion.",
+    "headache": "Rest in a quiet place, avoid bright lights, stay hydrated, and see a doctor if pain is severe or frequent.",
+    "migraine": "Rest in a dark, quiet room, use a cold compress on the forehead, and seek medical care if attacks are frequent.",
+    "sinusitis": "Steam inhalation and warm fluids may help relieve pressure; consult a doctor if facial pain or fever occurs.",
+    "sore_throat": "Gargle with warm salt water and drink warm fluids like tea or soup; see a doctor if swallowing is painful.",
+    "flu": "Get enough rest, drink fluids regularly, and consult a doctor if weakness or fever worsens.",
+    "asthma": "Avoid smoke and allergens, use inhalers as prescribed, and seek medical help if breathing becomes difficult.",
+    "allergy": "Avoid known triggers, keep surroundings clean, and consult a doctor if symptoms worsen.",
+    "bronchitis": "Rest well, drink warm fluids, avoid smoke, and follow doctor-recommended treatment if symptoms persist.",
+    "pneumonia": "Seek medical care promptly, rest adequately, and follow professional treatment guidance.",
+    "stomach_ache": "Eat light foods, drink water, and consult a doctor if pain is severe or persistent.",
+    "indigestion": "Eat smaller meals, avoid spicy food, and drink warm water; see a doctor if discomfort continues.",
+    "acidity": "Avoid oily or spicy foods, drink warm water, and consult a doctor if symptoms are frequent.",
+    "diarrhea": "Prevent dehydration by drinking oral rehydration solution and water, and avoid greasy foods.",
+    "constipation": "Increase fiber intake, drink plenty of water, and stay physically active.",
+    "vomiting": "Take small sips of water or ORS and seek medical care if vomiting continues.",
+    "nausea": "Rest, avoid strong smells, and sip ginger tea or warm water.",
+    "food_poisoning": "Rest, drink ORS and water, and consult a doctor if fever or blood in stool appears.",
+    "diabetes": "Monitor blood sugar regularly, follow a healthy diet, and follow your doctor's instructions.",
+    "hypertension": "Reduce salt intake, exercise regularly, manage stress, and follow medical advice.",
+    "low_blood_pressure": "Drink fluids, rise slowly from sitting, and consult a doctor if dizziness occurs.",
+    "chest_pain": "Rest immediately and seek urgent medical care, especially if pain is severe or spreading.",
+    "back_pain": "Rest the back, maintain good posture, apply heat if helpful, and consult a doctor if pain persists.",
+    "neck_pain": "Avoid strain, do gentle stretches, and use a warm compress if needed.",
+    "joint_pain": "Rest affected joints, do gentle movement, and consult a doctor if swelling occurs.",
+    "arthritis": "Keep joints active with gentle exercise and follow medical guidance for pain management.",
+    "muscle_pain": "Rest the muscle, apply warm compress, and hydrate well.",
+    "leg_cramps": "Stretch gently and drink enough water throughout the day.",
+    "fatigue": "Ensure adequate sleep, eat balanced meals, and stay hydrated.",
+    "dehydration": "Drink water, oral rehydration solution, or coconut water and seek care if symptoms worsen.",
+    "dizziness": "Sit or lie down safely, drink fluids, and consult a doctor if fainting occurs.",
+    "anxiety": "Practice deep breathing and relaxation techniques, and seek professional help if anxiety interferes with daily life.",
+    "depression": "Seek mental health support, talk to a trusted person, and consult a professional for proper care.",
+    "stress": "Take breaks, practice relaxation techniques, and maintain a balanced routine.",
+    "insomnia": "Maintain a regular sleep schedule, reduce screen time at night, and seek help if sleeplessness continues.",
+    "skin_rash": "Keep the area clean and dry, avoid irritants, and consult a doctor if rash spreads.",
+    "itching": "Avoid scratching, apply soothing lotion, and seek care if itching is severe.",
+    "fungal_infection": "Keep the area dry and clean, and consult a doctor if infection spreads.",
+    "ear_pain": "Avoid water entry into the ear and consult a doctor if pain or discharge occurs.",
+    "eye_strain": "Rest your eyes, reduce screen time, and use proper lighting.",
+    "toothache": "Rinse the mouth with warm salt water, avoid hard foods, and see a dentist if pain persists.",
+    "mouth_ulcer": "Avoid spicy foods, rinse with salt water, and consult a doctor if ulcers last more than two weeks.",
+    "bad_breath": "Maintain oral hygiene, drink water frequently, and consult a dentist if the problem continues.",
     "hospital": "Nearest hospital is City Health Center, contact: 1234567890.",
     "doctor": "Dr. Sharma is available at 9876543210.",
-    "default": "Sorry, I didn't understand. Please consult your healthcare provider."
+    "default": "I'm sorry, I didn't quite understand that. Could you please describe your symptom differently?"
 }
 
 # Multilingual input keywords mapped to English keys
 INPUT_KEYWORDS = {
     'hi': {
-        "बुखार": "fever",
-        "फ़ीवर": "fever",
-        "खांसी": "cough",
-        "कफ़": "cough",
-        "जुकाम": "cold",
-        "सर्दी": "cold",
+        "बुखार": "fever", "फ़ीवर": "fever",
+        "खांसी": "cough", "कफ़": "cough",
+        "जुकाम": "cold", "सर्दी": "cold",
         "सिरदर्द": "headache",
-        "मधुमेह": "diabetes",
-        "शुगर": "diabetes",
-        "उच्च रक्तचाप": "hypertension",
-        "ब्लड प्रेशर": "hypertension",
+        "मधुमेह": "diabetes", "शुगर": "diabetes",
+        "उच्च रक्तचाप": "hypertension", "ब्लड प्रेशर": "hypertension",
         "दमा": "asthma",
         "एलर्जी": "allergy",
         "फ्लू": "flu",
-        "पेट दर्द": "stomach ache",
+        "पेट दर्द": "stomach_ache",
         "दस्त": "diarrhea",
-        "पीठ दर्द": "back pain",
+        "पीठ दर्द": "back_pain",
         "अवसाद": "depression",
         "चिंता": "anxiety",
         "गठिया": "arthritis",
+        "धन्यवाद": "thank_you",
+        "शुक्रिया": "thank_you",
+        "ठीक है": "okay",
+        "अस्पताल": "hospital",
+        "डॉक्टर": "doctor",
     },
     'ta': {
         "காய்ச்சல்": "fever",
         "படர்ப்பு": "cough",
-        "காய்ச்சல் மற்றும் போது குளிர்ச்சி": "cold",
+        "குளிர்ச்சி": "cold",
         "தலைவலி": "headache",
-        "பருமன் நீர் சர்க்கரை": "diabetes",
+        "சர்க்கரை": "diabetes",
         "உயர் இரத்த அழுத்தம்": "hypertension",
         "அஸ்துமா": "asthma",
         "அலெர்ஜி": "allergy",
+        "நன்றி": "thank_you",
+        "சரி": "okay",
+        "மருத்துவமனை": "hospital",
+        "மருத்துவர்": "doctor",
     },
     'te': {
         "జ్వరం": "fever",
@@ -94,9 +97,13 @@ INPUT_KEYWORDS = {
         "జలుబు": "cold",
         "తలనొప్పి": "headache",
         "మధుమేహం": "diabetes",
-        "ఉన్నత రక్తపోటు": "hypertension",
+        "రక్తపోటు": "hypertension",
         "దమ": "asthma",
         "అలర్జీ": "allergy",
+        "ధన్యవాదాలు": "thank_you",
+        "సరే": "okay",
+        "హాస్పిటల్": "hospital",
+        "డాక్టర్": "doctor",
     },
     'kn': {
         "ಜ್ವರ": "fever",
@@ -107,7 +114,19 @@ INPUT_KEYWORDS = {
         "ಹೈಪರ್ಟೆನ್ಷನ್": "hypertension",
         "ಅಸ್ಥಮಾ": "asthma",
         "ಅಲರ್ಜಿ": "allergy",
+        "ಧನ್ಯವಾದ": "thank_you",
+        "ಸರಿ": "okay",
+        "ಆಸ್ಪತ್ರೆ": "hospital",
+        "ಡಾಕ್ಟರ್": "doctor",
     },
+}
+
+# Closing/Thank you responses
+CLOSING_RESPONSES = {
+    "thank_you": "You're welcome! Take care of your health. Feel free to ask if you have any other health concerns.",
+    "okay": "Alright! I hope the advice helps. Stay healthy and don't hesitate to reach out if you need more help.",
+    "bye": "Goodbye! Wishing you good health. Come back anytime you need health advice.",
+    "thanks": "You're welcome! Take care and stay healthy!",
 }
 
 translator = Translator()
@@ -154,6 +173,32 @@ def translate_text(text, target_lang='en'):
         return text
 
 
+def detect_closing_statement(user_input, lang_code='en'):
+    """Detect if user is saying thank you, okay, bye, etc."""
+    normalized = user_input.lower().strip()
+    
+    # English closing keywords
+    closing_keywords = [
+        'thank you', 'thanks', 'thankyou', 'thank u', 'thnx', 'thx',
+        'ok', 'okay', 'alright', 'got it', 'understood',
+        'bye', 'goodbye', 'see you', 'take care'
+    ]
+    
+    # Check if input matches closing keywords
+    for keyword in closing_keywords:
+        if keyword in normalized:
+            return True
+    
+    # Check language-specific keywords
+    if lang_code in INPUT_KEYWORDS:
+        keywords_map = INPUT_KEYWORDS[lang_code]
+        for local_word, eng_key in keywords_map.items():
+            if local_word in normalized and eng_key in ['thank_you', 'okay', 'bye']:
+                return True
+    
+    return False
+
+
 def detect_symptom(user_input, lang_code='en'):
     """Detect symptom from user input."""
     normalized = unicodedata.normalize('NFC', user_input).lower()
@@ -162,7 +207,7 @@ def detect_symptom(user_input, lang_code='en'):
     if lang_code in INPUT_KEYWORDS:
         keywords_map = INPUT_KEYWORDS[lang_code]
         for local_word, eng_key in keywords_map.items():
-            if local_word in normalized:
+            if local_word in normalized and eng_key in RESPONSES_EN:
                 return eng_key
     
     # Try translating to English and matching
@@ -171,7 +216,7 @@ def detect_symptom(user_input, lang_code='en'):
         translated_text = (translated.text or normalized).lower()
         
         for key in RESPONSES_EN.keys():
-            if key in translated_text:
+            if key in translated_text or key.replace('_', ' ') in translated_text:
                 return key
     except Exception:
         pass
@@ -189,20 +234,34 @@ def get_conversational_response(user_input, session_id, lang_code='en'):
     
     normalized_input = user_input.lower().strip()
     
+    # Check if user is saying thank you or closing the conversation
+    if detect_closing_statement(user_input, lang_code):
+        # Randomly select a closing response
+        import random
+        closing_msg = random.choice(list(CLOSING_RESPONSES.values()))
+        # Reset session for next conversation
+        conversation_state.reset_session(session_id)
+        return translate_text(closing_msg, lang_code)
+    
     # Stage 1: Initial symptom detection
     if session['stage'] == 'initial':
         symptom = detect_symptom(user_input, lang_code)
         
-        if symptom and symptom != 'default':
+        if symptom and symptom in RESPONSES_EN and symptom not in ['default', 'hospital', 'doctor']:
             conversation_state.update_session(
                 session_id,
                 symptom=symptom,
                 stage='ask_duration'
             )
-            response = f"I understand you're experiencing {symptom}. How long have you been experiencing this symptom? (e.g., a few hours, 2 days, a week)"
+            response = f"I understand you're experiencing {symptom.replace('_', ' ')}. How long have you been experiencing this symptom? (e.g., a few hours, 2 days, a week)"
+            return translate_text(response, lang_code)
+        elif symptom in ['hospital', 'doctor']:
+            # Direct information request
+            response = RESPONSES_EN.get(symptom, RESPONSES_EN['default'])
             return translate_text(response, lang_code)
         else:
-            response = "I'm here to help with your health concerns. Could you please describe your main symptom? (e.g., fever, cough, headache)"
+            # Symptom not found in database
+            response = "I'm sorry, but information about that specific symptom is currently unavailable in my database. I'm continuously being updated with more health information. For now, I recommend consulting a healthcare professional for personalized advice. Is there another symptom I can help you with?"
             return translate_text(response, lang_code)
     
     # Stage 2: Ask about duration
@@ -242,9 +301,9 @@ def get_conversational_response(user_input, session_id, lang_code='en'):
         base_advice = RESPONSES_EN.get(symptom, RESPONSES_EN['default'])
         
         # Create personalized response
-        personalized_response = f"Based on your {symptom} for {duration} with severity {severity}"
+        personalized_response = f"Based on your {symptom.replace('_', ' ')} for {duration} with severity {severity}"
         
-        if additional.lower() not in ['none', 'no', 'नहीं', 'இல்லை', 'లేదు', 'ಇಲ್ಲ']:
+        if additional.lower() not in ['none', 'no', 'नहीं', 'இல்லை', 'లేదు', 'ಇಲ್ಲ', 'না']:
             personalized_response += f" and additional symptoms ({additional})"
         
         personalized_response += f", here's my advice:\n\n{base_advice}"
@@ -267,7 +326,7 @@ def get_conversational_response(user_input, session_id, lang_code='en'):
         return translate_text(personalized_response, lang_code)
     
     # Fallback
-    response = "I'm here to help. Please describe your symptom."
+    response = "I'm here to help with your health concerns. Please describe your symptom, or say 'thank you' if you're done."
     return translate_text(response, lang_code)
 
 
