@@ -1,145 +1,44 @@
-# AROGYA VANI - Multilingual Health Chatbot 🏥
+# 🏥 AROGYA VANI - AI Health Chatbot
 
-A conversational health chatbot that provides personalized medical advice in multiple Indian languages. The chatbot asks follow-up questions about symptom duration, severity, and additional symptoms before providing tailored health recommendations with text-to-speech support.
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20App-success?style=for-the-badge&logo=netlify)](https://healthchatkit.netlify.app/)
+[![Backend API](https://img.shields.io/badge/API-Railway-blueviolet?style=for-the-badge&logo=railway)](https://web-production-c2ec2.up.railway.app)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/luckybiswal98210-eng/chatbot-integrity-with-symptoms-dection)
 
-## Features
+> **🚀 [Try the Live App Now!](https://healthchatkit.netlify.app/)** - Your intelligent multilingual health assistant
 
-- 🗣️ **Conversational AI**: Asks follow-up questions for personalized advice
-- 🌍 **Multilingual Support**: English, Hindi, Tamil, Telugu, Kannada, Bengali, Gujarati, Marathi
-- 🔊 **Text-to-Speech**: Audio responses in all supported languages
-- 💬 **Session Management**: Maintains conversation context across multiple turns
-- 🎨 **Modern UI**: Clean, responsive Flutter web interface with Material 3 design
-- ⚡ **Fast API Backend**: Built with FastAPI for high performance
-- 🤝 **Polite Responses**: Gracefully handles thank you, goodbye, and closing statements
-- ❓ **Smart Error Handling**: Provides helpful messages for unknown symptoms
-- ⚠️ **Urgency Detection**: Warns users when symptoms require immediate medical attention
+An advanced conversational AI health chatbot that provides personalized medical advice through intelligent multi-turn dialogues. Built with Flutter and FastAPI, supporting 8+ Indian languages with text-to-speech capabilities.
 
-## Architecture
+---
 
-- **Frontend**: Flutter Web (Dart)
-- **Backend**: FastAPI (Python)
-- **Translation**: Google Translate API
-- **TTS**: Google Text-to-Speech (gTTS)
+## ✨ Features
 
-## Local Development
+🤖 **Conversational AI** - Asks follow-up questions about duration, severity, and additional symptoms  
+🌍 **8+ Languages** - English, Hindi, Tamil, Telugu, Kannada, Bengali, Gujarati, Marathi  
+🔊 **Text-to-Speech** - Audio responses in all supported languages  
+💬 **Smart Conversations** - Maintains context across multiple turns  
+🎨 **Modern UI** - Clean Material 3 design with smooth animations  
+🤝 **Polite Responses** - Gracefully handles greetings, thank you, and goodbyes  
+⚠️ **Urgency Detection** - Warns users when symptoms require immediate attention  
+❓ **Smart Error Handling** - Helpful messages for unknown symptoms  
 
-### Prerequisites
+---
 
-- Python 3.10+
-- Flutter SDK 3.9+
-- pip and virtualenv
+## 🎯 Live Demo
 
-### Backend Setup
+**Frontend:** [https://healthchatkit.netlify.app/](https://healthchatkit.netlify.app/)  
+**Backend API:** [https://web-production-c2ec2.up.railway.app](https://web-production-c2ec2.up.railway.app)
 
-1. Create and activate virtual environment:
+### Try It Now:
+1. Visit [healthchatkit.netlify.app](https://healthchatkit.netlify.app/)
+2. Type a symptom (e.g., "I have a fever")
+3. Answer the follow-up questions
+4. Get personalized health advice!
 
-```bash
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
+---
 
-2. Install dependencies:
+## 🎬 How It Works
 
-```bash
-pip install -r requirements.txt
-```
-
-3. Run the backend server:
-
-```bash
-uvicorn app:app --host 0.0.0.0 --port 8000 --reload
-```
-
-The backend will be available at `http://localhost:8000`
-
-### Frontend Setup
-
-1. Build Flutter web app:
-
-```bash
-flutter pub get
-flutter build web
-```
-
-2. For development, you can run:
-
-```bash
-flutter run -d chrome
-```
-
-### Test the API
-
-```bash
-curl -X POST http://localhost:8000/chat \
-  -H "Content-Type: application/json" \
-  -d '{"question":"I have fever","language":"en","session_id":"test123"}'
-```
-
-## Deployment
-
-### Option 1: Railway (Recommended)
-
-Railway provides free hosting with automatic deployments from GitHub.
-
-1. **Push to GitHub** (if not already done):
-   ```bash
-   git add .
-   git commit -m "Updated chatbot with conversational features"
-   git push origin main
-   ```
-
-2. **Deploy to Railway**:
-   - Go to [railway.app](https://railway.app)
-   - Sign in with GitHub
-   - Click "New Project" → "Deploy from GitHub repo"
-   - Select your repository
-   - Railway will auto-detect the Dockerfile and deploy
-   - Get your public URL (e.g., `https://your-app.railway.app`)
-
-3. **Update Flutter App**:
-   - Open `lib/main.dart`
-   - Update line 34: `final String apiBaseUrl = "https://your-app.railway.app";`
-   - Rebuild: `flutter build web`
-   - Deploy the `build/web` folder to a static host (Netlify, Vercel, GitHub Pages)
-
-### Option 2: Render
-
-1. Push code to GitHub
-2. Go to [render.com](https://render.com)
-3. Create new "Web Service"
-4. Connect your GitHub repository
-5. Render will detect Dockerfile and deploy
-6. Update Flutter app with your Render URL
-
-### Option 3: Docker (Any Platform)
-
-Build and run with Docker:
-
-```bash
-docker build -t arogya-vani .
-docker run -p 8000:8000 arogya-vani
-```
-
-## Environment Variables
-
-Create a `.env` file (optional):
-
-```env
-PORT=8000
-CORS_ORIGINS=*
-```
-
-## How It Works
-
-### Conversational Flow
-
-1. **User describes symptom** → Bot identifies the symptom
-2. **Bot asks about duration** → "How long have you had this?"
-3. **Bot asks about severity** → "Rate 1-10"
-4. **Bot asks about additional symptoms** → "Any other symptoms?"
-5. **Bot provides personalized advice** → Based on all collected information
-
-### Example Conversation
+### Example Conversation:
 
 ```
 User: I have a fever
@@ -148,69 +47,270 @@ Bot: I understand you're experiencing fever. How long have you been experiencing
 User: 2 days
 Bot: Thank you. On a scale of 1-10, how severe is your symptom?
 
-User: 7
+User: 8
 Bot: Are you experiencing any additional symptoms?
 
 User: headache and body aches
-Bot: Based on your fever for 2 days with severity 7 and additional symptoms (headache and body aches), here's my advice:
-     Rest well, drink plenty of water or oral rehydration fluids, and consult a doctor if fever is high or lasts more than a few days.
-     ⚠️ Please consider consulting a doctor soon.
-     
+Bot: Based on your fever for 2 days with severity 8 and additional symptoms:
+     Rest well, drink plenty of water, and consult a doctor if fever persists.
+     ⚠️ Given the high severity, I strongly recommend seeking immediate medical attention.
+
 User: Thank you
-Bot: You're welcome! Take care of your health. Feel free to ask if you have any other health concerns.
+Bot: You're welcome! Take care of your health. Feel free to ask if you have any other concerns.
 ```
 
-### Handling Unknown Symptoms
+---
 
+## 🛠️ Tech Stack
+
+### Frontend
+- **Flutter** - Cross-platform UI framework
+- **Material 3** - Modern design system
+- **HTTP** - API communication
+- **AudioPlayers** - Text-to-speech playback
+
+### Backend
+- **FastAPI** - High-performance Python web framework
+- **Uvicorn** - ASGI server
+- **Google Translate API** - Multi-language translation
+- **gTTS** - Text-to-speech generation
+- **Pydantic** - Data validation
+
+### Deployment
+- **Netlify** - Frontend hosting
+- **Railway** - Backend hosting
+- **Docker** - Containerization
+
+---
+
+## 📦 Installation & Setup
+
+### Prerequisites
+- Python 3.10+
+- Flutter SDK 3.9+
+- Git
+
+### Backend Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/luckybiswal98210-eng/chatbot-integrity-with-symptoms-dection.git
+cd chatbot-integrity-with-symptoms-dection
+
+# Create virtual environment
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the server
+python app.py
 ```
-User: I have dragon pox
-Bot: I'm sorry, but information about that specific symptom is currently unavailable in my database. 
-     I'm continuously being updated with more health information. For now, I recommend consulting 
-     a healthcare professional for personalized advice. Is there another symptom I can help you with?
+
+Server will start at `http://localhost:8000`
+
+### Frontend Setup
+
+```bash
+# Install Flutter dependencies
+flutter pub get
+
+# Run on Chrome
+flutter run -d chrome
+
+# Or build for web
+flutter build web
 ```
 
-## API Endpoints
+---
 
-- `POST /chat` - Send message and get response
-  - Body: `{"question": "text", "language": "en", "session_id": "unique_id"}`
-  
-- `POST /reset` - Reset conversation
-  - Body: `{"session_id": "unique_id"}`
-  
-- `GET /health` - Health check
+## 🌐 API Endpoints
 
-## Supported Languages
+### `POST /chat`
+Send a message and get conversational response.
 
-- English (`en`)
-- Hindi (`hi`)
-- Tamil (`ta`)
-- Telugu (`te`)
-- Kannada (`kn`)
+**Request:**
+```json
+{
+  "question": "I have a fever",
+  "language": "en",
+  "session_id": "unique_session_id"
+}
+```
 
-## Project Structure
+**Response:**
+```json
+{
+  "response_text": "I understand you're experiencing fever...",
+  "audio_url": "/audio/response_xyz_en.mp3",
+  "session_id": "unique_session_id"
+}
+```
+
+### `POST /reset`
+Reset conversation session.
+
+### `GET /health`
+Health check endpoint.
+
+### `GET /`
+API information and documentation.
+
+---
+
+## 🗂️ Project Structure
 
 ```
 chatbot_app/
 ├── lib/
-│   └── main.dart          # Flutter frontend
-├── app.py                 # FastAPI backend
-├── responses.py           # Conversation logic
-├── chatbot.py            # TTS functionality
-├── requirements.txt      # Python dependencies
-├── Dockerfile           # Container configuration
-└── pubspec.yaml        # Flutter dependencies
+│   └── main.dart              # Flutter frontend
+├── app.py                     # FastAPI backend
+├── responses.py               # Conversational logic & symptom database
+├── chatbot.py                 # Text-to-speech functionality
+├── requirements.txt           # Python dependencies
+├── Dockerfile                 # Container configuration
+├── pubspec.yaml              # Flutter dependencies
+└── README.md                 # This file
 ```
 
-## Notes
+---
 
-- Audio files are stored temporarily in the `audio/` directory
-- For production, consider using cloud storage (S3, GCS) for audio files
-- The chatbot provides general health advice - always consult a healthcare professional for serious conditions
+## 🚀 Deployment
 
-## Contributing
+### Deploy Backend (Railway)
 
-Feel free to submit issues and enhancement requests!
+1. Push code to GitHub
+2. Go to [railway.app](https://railway.app)
+3. Create new project from GitHub repo
+4. Railway auto-detects Dockerfile and deploys
+5. Get your production URL
 
-## License
+### Deploy Frontend (Netlify)
 
-MIT License
+**Option 1: Drag & Drop**
+1. Build: `flutter build web`
+2. Go to [netlify.com](https://netlify.com)
+3. Drag `build/web/` folder to Netlify
+
+**Option 2: CLI**
+```bash
+flutter build web
+npx netlify-cli deploy --prod --dir=build/web
+```
+
+---
+
+## 🌍 Supported Languages
+
+- 🇬🇧 English
+- 🇮🇳 Hindi (हिंदी)
+- 🇮🇳 Tamil (தமிழ்)
+- 🇮🇳 Telugu (తెలుగు)
+- 🇮🇳 Kannada (ಕನ್ನಡ)
+- 🇮🇳 Bengali (বাংলা)
+- 🇮🇳 Gujarati (ગુજરાતી)
+- 🇮🇳 Marathi (मराठी)
+
+---
+
+## 📱 Features in Detail
+
+### Conversational Flow
+- Multi-turn dialogue system
+- Context-aware responses
+- Session management
+- Follow-up questions about:
+  - Symptom duration
+  - Severity (1-10 scale)
+  - Additional symptoms
+
+### Smart Features
+- **Polite Responses:** Handles "thank you", "goodbye", "okay"
+- **Unknown Symptoms:** Provides helpful guidance when symptom not in database
+- **Urgency Warnings:** Alerts for high-severity symptoms (8-10)
+- **Personalized Advice:** Tailored recommendations based on collected information
+
+### Multi-language Support
+- Real-time translation
+- Text-to-speech in all languages
+- Language-specific keyword detection
+- Seamless language switching
+
+---
+
+## 🎨 UI Features
+
+- Material 3 design
+- Responsive layout
+- Auto-scrolling messages
+- Loading indicators
+- Language selector dropdown
+- Reset conversation button
+- Audio playback controls
+- Smooth animations
+
+---
+
+## 🔒 Privacy & Disclaimer
+
+⚠️ **Medical Disclaimer:** This chatbot provides general health information only. Always consult a qualified healthcare professional for medical advice, diagnosis, or treatment.
+
+- No personal data is stored permanently
+- Audio files are generated temporarily
+- Session data is ephemeral
+- No user tracking or analytics
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to:
+- Report bugs
+- Suggest new features
+- Submit pull requests
+- Improve documentation
+
+---
+
+## 📄 License
+
+MIT License - feel free to use this project for learning and development.
+
+---
+
+## 👨‍💻 Author
+
+**Lucky Biswal**
+
+- GitHub: [@luckybiswal98210-eng](https://github.com/luckybiswal98210-eng)
+- Project: [AROGYA VANI](https://github.com/luckybiswal98210-eng/chatbot-integrity-with-symptoms-dection)
+
+---
+
+## 🌟 Acknowledgments
+
+- Google Translate API for translation services
+- Google Text-to-Speech for audio generation
+- Flutter team for the amazing framework
+- FastAPI for the high-performance backend
+
+---
+
+## 📞 Support
+
+For issues or questions:
+- Open an issue on [GitHub](https://github.com/luckybiswal98210-eng/chatbot-integrity-with-symptoms-dection/issues)
+- Check the [documentation](https://github.com/luckybiswal98210-eng/chatbot-integrity-with-symptoms-dection)
+
+---
+
+<div align="center">
+
+### 🚀 **[Launch AROGYA VANI Now!](https://healthchatkit.netlify.app/)**
+
+Made with ❤️ for better healthcare accessibility
+
+[![Live Demo](https://img.shields.io/badge/🌐_Try_Live_Demo-Visit_App-success?style=for-the-badge)](https://healthchatkit.netlify.app/)
+
+</div>
