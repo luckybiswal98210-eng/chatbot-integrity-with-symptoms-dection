@@ -9,6 +9,10 @@ import os
 
 app = FastAPI()
 
+# Ensure audio directory exists on startup
+audio_dir = "audio"
+os.makedirs(audio_dir, exist_ok=True)
+
 # Allow frontend/client access
 app.add_middleware(
     CORSMiddleware,
@@ -46,3 +50,8 @@ async def chat_endpoint(req: ChatRequest):
         },
         media_type="application/json; charset=utf-8"
     )
+
+
+@app.get("/health")
+def health_check():
+    return JSONResponse(content={"status": "ok"})
