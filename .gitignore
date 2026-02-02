@@ -60,3 +60,6 @@ build/
 # Generated audio files
 audio/*.mp3
 !audio/.gitkeep
+
+# Flutter SDK (local development only)
+flutter/
