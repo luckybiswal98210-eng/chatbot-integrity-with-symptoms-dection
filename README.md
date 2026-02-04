@@ -12,10 +12,13 @@ An advanced conversational AI health chatbot that provides personalized medical 
 
 ## ✨ Features
 
-🤖 **Conversational AI** - Asks follow-up questions about duration, severity, and additional symptoms  
+🩺 **Intelligent Diagnostics** - Asks context-aware questions and suggests possible conditions  
+🎯 **Disease Suggestions** - Analyzes symptoms to recommend likely health conditions  
+🤖 **Conversational AI** - Multi-turn dialogues with follow-up questions  
 🌍 **8+ Languages** - English, Hindi, Tamil, Telugu, Kannada, Bengali, Gujarati, Marathi  
 🔊 **Text-to-Speech** - Audio responses in all supported languages  
 💬 **Smart Conversations** - Maintains context across multiple turns  
+🏥 **25+ Conditions** - Dengue, Malaria, COVID-19, TB, Gastritis, UTI, and more  
 🎨 **Modern UI** - Clean Material 3 design with smooth animations  
 🤝 **Polite Responses** - Gracefully handles greetings, thank you, and goodbyes  
 ⚠️ **Urgency Detection** - Warns users when symptoms require immediate attention  
@@ -38,7 +41,7 @@ An advanced conversational AI health chatbot that provides personalized medical 
 
 ## 🎬 How It Works
 
-### Example Conversation:
+### Example Conversation (New v3.0 Diagnostic Flow):
 
 ```
 User: I have a fever
@@ -48,12 +51,34 @@ User: 2 days
 Bot: Thank you. On a scale of 1-10, how severe is your symptom?
 
 User: 8
+Bot: To better understand your condition, I'll ask a few specific questions.
+     Do you have any rash or red spots on your skin?
+
+User: Yes, I have red spots
+Bot: Are you experiencing severe body aches or joint pain?
+
+User: Yes, severe body pain
+Bot: Have you traveled to any tropical or mosquito-prone areas recently?
+
+User: Yes, I traveled last week
+Bot: Do you have a headache, especially behind your eyes?
+
+User: Yes, behind my eyes
+Bot: Are you experiencing nausea or vomiting?
+
+User: Yes, feeling nauseous
 Bot: Are you experiencing any additional symptoms?
 
-User: headache and body aches
-Bot: Based on your fever for 2 days with severity 8 and additional symptoms:
-     Rest well, drink plenty of water, and consult a doctor if fever persists.
-     ⚠️ Given the high severity, I strongly recommend seeking immediate medical attention.
+User: weakness and loss of appetite
+Bot: Based on your fever for 2 days with severity 8 and additional symptoms,
+     possible conditions include **Dengue**, **Malaria**, or **Chikungunya**.
+     
+     **Recommended Action:**
+     ⚠️ Dengue requires immediate medical attention. Rest completely, drink 
+     plenty of fluids (ORS, coconut water), monitor platelet count...
+     
+     ⚠️ **URGENT:** Given the high severity, I strongly recommend seeking 
+     immediate medical attention.
 
 User: Thank you
 Bot: You're welcome! Take care of your health. Feel free to ask if you have any other concerns.
