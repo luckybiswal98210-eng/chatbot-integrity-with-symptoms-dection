@@ -78,7 +78,7 @@ def root():
     """Root endpoint with API information"""
     return JSONResponse(content={
         "name": "AROGYA VANI Health Chatbot API",
-        "version": "2.0",
+        "version": "3.0",
         "status": "running",
         "endpoints": {
             "POST /chat": "Send a message and get conversational response",
@@ -87,12 +87,23 @@ def root():
             "GET /docs": "Interactive API documentation"
         },
         "features": [
-            "Conversational AI with follow-up questions",
-            "Multilingual support (8+ languages)",
-            "Text-to-Speech responses",
-            "Session management",
-            "Polite closing responses",
-            "Smart error handling"
+            "🩺 Intelligent diagnostic questioning",
+            "🎯 Disease suggestion based on symptoms",
+            "💬 Conversational AI with follow-up questions",
+            "🌍 Multilingual support (8+ languages)",
+            "🔊 Text-to-Speech responses",
+            "📊 Session management",
+            "✅ 25+ health conditions supported",
+            "🤝 Polite closing responses",
+            "🛡️ Smart error handling"
+        ],
+        "supported_conditions": [
+            "Dengue, Malaria, Typhoid, Chikungunya",
+            "COVID-19, Tuberculosis, Pneumonia",
+            "Gastritis, GERD, Ulcer, UTI",
+            "Chickenpox, Measles, Mumps",
+            "Diabetes, Hypertension, Thyroid, Anemia",
+            "And many more..."
         ]
     })
 
@@ -102,7 +113,8 @@ def health_check():
 
 if __name__ == "__main__":
     import uvicorn
-    print("🚀 Starting AROGYA VANI Health Chatbot Server...")
+    print("🚀 Starting AROGYA VANI Health Chatbot Server v3.0...")
     print("📍 Server will be available at: http://localhost:8000")
     print("📚 API Documentation: http://localhost:8000/docs")
+    print("🩺 New: Intelligent diagnostic capabilities with 25+ conditions!")
     uvicorn.run(app, host="0.0.0.0", port=8000)
